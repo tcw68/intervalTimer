@@ -30,7 +30,6 @@ struct ContentView: View {
                     timeRemaining = 10
                     showStart = false
                     startTimer = true
-                    sleep(1)
                 } label: {
                     Text("Start").font(.system(size: 40)).fontWeight(.bold).foregroundColor(Color.blue)
                 }.buttonStyle(.borderedProminent)
