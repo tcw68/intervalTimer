@@ -10,8 +10,8 @@ import AVFoundation
 
 func speak(word: String) -> Void {
     let utterance = AVSpeechUtterance(string: word)
-    utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
-    utterance.rate = 0.1
+    utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+    utterance.rate = 0.3
     
     let synthesizer = AVSpeechSynthesizer()
     synthesizer.speak(utterance)
