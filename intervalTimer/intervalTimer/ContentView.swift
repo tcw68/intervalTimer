@@ -10,7 +10,7 @@ import AVFoundation
 
 func speak(word: String) -> Void {
     let utterance = AVSpeechUtterance(string: word)
-    utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+    utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
     utterance.rate = 0.1
     
     let synthesizer = AVSpeechSynthesizer()
@@ -30,6 +30,7 @@ struct ContentView: View {
                     timeRemaining = 10
                     showStart = false
                     startTimer = true
+                    sleep(1)
                 } label: {
                     Text("Start").font(.system(size: 40)).fontWeight(.bold).foregroundColor(Color.blue)
                 }.buttonStyle(.borderedProminent)
