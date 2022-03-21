@@ -45,7 +45,7 @@ struct ContentView: View {
                 HStack(spacing: 16) {
                     Text("\(timeRemaining)").font(.system(size: 80)).fontWeight(.bold)
                         .onReceive(timer) { _ in
-                            if timeRemaining >= 0 {
+                            if timeRemaining > 0 {
                                 timeRemaining -= 1
                                 
                                 
@@ -59,8 +59,8 @@ struct ContentView: View {
                                     speak(word: "Up")
                                 }
                                 
-                                if timeRemaining == -1 {
-                                    timeRemaining = 9
+                                if timeRemaining == 0 {
+                                    timeRemaining = 10
                                 }
                             }
                         }
